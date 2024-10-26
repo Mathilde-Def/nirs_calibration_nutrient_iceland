@@ -5,7 +5,7 @@ Capturing seasonal variations in faecal nutrient content from tundra herbivores 
 here the DOI of the publication
 2024
 
-# sample collection
+# Sample collection
 The model is developed  with samples from Iceland. Samples were collected in 2022 from the Easter Highlands (65.3234 °N, 15.3062 °E). They includes fresh faecal material from free roaming tundra herbivores, including the pink-footed geese (Anser brachyrhynchus), the feral reindeer (Rangifer tarandus), and the domestic sheep (Ovis aries).
 Samples are presented as tablets, dried at 40°C for 3 hours and cooled down in a desiccator
 
@@ -23,7 +23,7 @@ Model are developed with Log 1/R spectra, values measured in % Dry Weight
 # Calibration function 
 the detailed steps to calibrate and validate the model are contained in ./functions/calibration_nirs.R
 
-# final multispecies models
+# Final multispecies models
 The final multispecies models, including all herbivore species are saved in the folder "./a_ready_to_apply_nirs_model"
 file names:  "nirs_faecal_N_model2024.rda", "nirs_faecal_P_model2024.rda", "nirs_faecal_C_model2024.rda"
 
