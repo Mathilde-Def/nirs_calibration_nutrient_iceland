@@ -11,7 +11,7 @@ This reference repository contains all necessary code and data to estimate carbo
 Faecal samples were collected in the Eastern Highlands of Iceland across three time points during the growing season (early, peak, and late). Samples were obtained from three tundra herbivore species: **sheep**, **reindeer**, and **pink-footed goose**.
 
 Sample preparation steps:
-- Fresh faeces were milled and pressed into Ø15 mm tablets under 4 tons of pressure.
+- Fresh faeces were dried at 40ºC, milled and pressed into Ø15 mm tablets under 4 tons of pressure.
 - Tablets were dried at 40ºC and stored in a desiccator before scanning.
 - Spectral data were collected and paired with laboratory-measured nutrient concentrations for model calibration.
 
