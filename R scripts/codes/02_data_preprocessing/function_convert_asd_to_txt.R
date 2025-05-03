@@ -58,8 +58,8 @@ asd_to_txt <- function (in.dir, out.dir, output.name = output.name,
 ## RUN FUNCTION
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 
-asd_to_txt(in.dir = "./data/2-labdata/dung_spectra",  # write here the path to the folder with all asd files
-           out.dir = "./data/2-labdata",                          # write here the path to the folder where the txt file with all spectra should be saved
+asd_to_txt(in.dir = "./R studio/data/dung_spectra",  # write here the path to the folder with all asd files
+           out.dir = "./R studio/data/",                          # write here the path to the folder where the txt file with all spectra should be saved
            output.name = "dataset_dung_spectra_2022_log1R.txt",     # write here the name of the txt file
            type = "reflectance",                                              # don't change that
            log_ref = TRUE, 						      # TRUE if spectra should be presented as log(1/R) -> required for most calibration models
