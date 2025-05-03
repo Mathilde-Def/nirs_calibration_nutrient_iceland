@@ -26,13 +26,13 @@ Organized into subfolders by step in the analysis pipeline:
 - **`01_prediction_model/`**  
   Ready-to-use NIRS model for nutrient prediction. See folder-specific README for usage instructions.
 
-- **`02_preprocessing/`**  
+- **`02_data_preprocessing/`**  
   Scripts for converting and structuring spectral data, identifying outliers, and merging lab data for calibration.
 
 - **`03_model_calibration/`**  
   Model calibration scripts for predicting C, N, and P using NIRS.
 
-- **`04_statistical_analysis/`**  
+- **`04_faecal_analysis/`**  
   Statistical analysis scripts to assess nutrient variation by species and season, and estimate total deposition.
 
 #### `functions/`
