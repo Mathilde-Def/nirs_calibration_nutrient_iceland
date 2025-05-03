@@ -1,0 +1,16 @@
+id;herbivore;pile_ww;sample_ww;sample_dw
+oviari-1;sheep;47.63;8.49;1.7594
+oviari-2;sheep;107.223;11.7402;2.1932
+oviari-3;sheep;38.291;7.807;1.4226
+oviari-4;sheep;66.2397;8.5541;1.2198
+oviari-5;sheep;69.6654;16.3373;3.1165
+rantar-1;reindeer;30.1574;8.3039;3.0251
+rantar-2;reindeer;83.7856;9.565;3.5578
+rantar-3;reindeer;69.2323;8.0349;2.387
+rantar-4;reindeer;29.8723;6.7284;2.8209
+rantar-5;reindeer;54.2293;11.3023;3.7859
+ansbra-1;pink footed goose;14.4531;5.707;1.0658
+ansbra-2;pink footed goose;5.5804;2.2234;0.6775
+ansbra-3;pink footed goose;11.1337;5.5344;0.9553
+ansbra-4;pink footed goose;4.9497;1.5179;0.2301
+ansbra-5;pink footed goose;8.937;3.0461;0.3201
