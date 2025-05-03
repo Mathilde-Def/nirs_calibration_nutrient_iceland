@@ -1,15 +1,37 @@
 ################################################################################
-#                       FAECAL DATA NIRS CALIBRATION
-#                           Mathilde Defourneaux
-#                               Jan 23, 2023
+#
+#                            FORMATING CALIBRATION DATA
+#
 ################################################################################
 
-# Chapter 2 - Assessing herbivore faecal nutrient content using NIRS 
-# contact Mathilde Defourneaux (mathilde@lbhi.is) for more information
+################################################################################
+#
+# This script preprocesses faecal nutrient data (C, N, P) from lab analysis and 
+# spectral data for NIRS calibration. Key steps include:
+#
+# - Merging faecal nutrient content (C, N, P) from wet lab analysis with NIRS 
+#   spectral data
+# - Checking for data errors (duplicates, missing values, outliers)
+# - Formatting the dataset for NIRS model calibration
+# 
+# Sample Preparation:
+# - Faecal samples collected from herbivores in Iceland (sheep, reindeer, pink footed goose)
+# - Samples dried, milled, and analyzed for C, N, P content
+# - NIRS spectra were obtained from the same samples for wet laboratory analysis
 
-# Combined spectral data and wet laboratory nutrient analasis for NIRS model calibration
-# here protocole description
-# data formating, and cleaning
+# NIRS Spectra:
+# - FieldSpec 4 used for scanning with a spectral range of 350-2500 nm
+# - Sampling interval: 1.4 nm (350-1000 nm range) and 2 nm (1000-2500 nm range)
+
+# For more details, see:
+# Defourneaux, M., et al. (2025). Capturing seasonal variations in faecal nutrient 
+# content from tundra herbivores using Near Infrared Reflectance Spectroscopy. 
+# Science of the Total Environment (in press).
+#
+# Contact: Mathilde Defourneaux (mathilde@lbhi.is) for more information
+#
+################################################################################
+
 
 ####------------------------------------------------------------------------####
 #### SETUP
@@ -19,11 +41,11 @@ set.seed(132)
 
 ## ---- library
 
-source("./code/setup.R")
+source("./R scripts/codes/setup.R")
 
 # load data
-faecal_nut_lab <- fread(file = "./data/24-10-2024_faecal_nutrient_wet_lab.txt", sep = ";", header = T) # nutrient estimates from wet laboratory analysis
-source("./code/data_formating/cleaning_spectral_data.R") # NIRS spectral data
+faecal_nut_lab <- fread(file = "./R scripts/data/24-10-25_faecal_nutrient_wet_lab.txt", sep = ";", header = T) # nutrient estimates from wet laboratory analysis
+source("./R scripts/codes/data_formating/cleaning_spectral_data.R") # NIRS spectral data
 
 ####------------------------------------------------------------------------####
 #### ERRORS AND CLEANING
