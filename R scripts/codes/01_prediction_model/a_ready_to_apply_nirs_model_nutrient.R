@@ -4,47 +4,52 @@
 #
 ################################################################################
 
-# last update: Oct 25, 2024
+# Last update: October 25, 2024
 
-## This script is used to predict nitrogen concentration in faecal material
-## scanned with NIRS. 
+# This script is designed to predict the nutrient content (Nitrogen, Phosphorus, 
+# and Carbon) of herbivore faeces based on Near-Infrared Reflectance Spectroscopy 
+# (NIRS) models developed using samples from Iceland. The models predict nutrient 
+# content based on spectral data scanned from dried faecal tablets. The predictions 
+# are made for three nutrients: nitrogen (N), phosphorus (P), and carbon (C), and 
+# are expressed as percentages of dry weight.
 
-## Full description of the calibration can be read in :
-# Capturing seasonal variations in faecal nutrient content from tundra 
-# herbivores using Near Infrared Reflectance Spectroscopy 
-# here the DOI of the publication
-# 2024
-
-## The model is developed  with samples from Iceland.
-
-## Samples are presented as tablets, dried at 40°C for 3 hours 
-# and cooled down in a desiccator
-## Thereafter samples are scanned with NIRS 
-
-# A FieldSpec 4 was used to scan the samples, with a spectral range of 350-2500nm, 
-# with a sampling interval of 1.4 nm in the 350-1000 nm range 
-# and 2 nm in the 1000-2500 nm range
-
-## Model developed with Log 1/R spectra, values measured in % Dry Weight
-
-## The models are saved in a file "nirs_faecal_N_model2024.rda", 
-# nirs_faecal_C_model2024.rda" and "nirs_faecal_P_model2024.rda"
-
+# Key Information:
+# - Calibration Model: Developed from herbivore faecal samples collected from Iceland, 
+#   scanned with a FieldSpec 4 spectrometer.
+# - Spectral Range: 350–2500 nm, with a sampling interval of:
+#     - 1.4 nm (350-1000 nm)
+#     - 2 nm (1000-2500 nm)
+# - Sample Preparation:
+#     - Samples were presented as tablets, dried at 40°C for 3 hours, and then cooled 
+#       down in a desiccator.
+#
 ## Model specifications
 # nutrient    R2cal   RMSECV  R2val   RMSEP   Bias   Intercept  Slope
 #       N     0.83     0.25    0.88    0.21   -0.03    -0.36     1.15
 #       P     0.63     0.13    0.76    0.12    0.02     0.14     0.71    
 #       C     0.92     0.91    0.90    0.55   -0.15     6.53     0.85     
 
-# Contact person: 
-# Mathilde Defourneaux(mathilde@lbhi.is) 
+# Models and Files:
+# - The models developed for predicting nutrient content are saved as:
+#     - `nirs_faecal_N_model2024.rda` (Nitrogen model)
+#     - `nirs_faecal_C_model2024.rda` (Carbon model)
+#     - `nirs_faecal_P_model2024.rda` (Phosphorus model)
+
+# Contact:
+# For more details on the dataset and models, contact Mathilde Defourneaux at mathilde@lbhi.is.
+
+# Reference:
+# Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., 
+# Speed, J.D.M., Barrio, I.C., 2025. "Capturing seasonal variations in faecal nutrient 
+# content from tundra herbivores using Near Infrared Reflectance Spectroscopy." 
+# *Science of the Total Environment* (in press).
 
 #### -----------------------------------------------------------------------####
 #### SETUP
 #### -----------------------------------------------------------------------####
 
 ## load libraries
-source("./code/setup.R")
+source("./R scripts/codes/setup.R")
 
 # SCRIPTS OPTIONS --------------------------------------------------------------
 # not in
@@ -53,13 +58,13 @@ source("./code/setup.R")
 ## LOAD DATA -------------------------------------------------------------------
 
 # data set
-source("./code/data_formating/cleaning_spectral_data.R") #spectral data
+source("./R scripts/codes/02_data_preprocessing/cleaning_spectral_data.R") # NIRS spectral data
 
 # models
 
-load("./code/a_ready_to_apply_nirs_model_nutrient/nirs_faecal_N_model2024.rda")
-load("./code/a_ready_to_apply_nirs_model_nutrient/nirs_faecal_C_model2024.rda")
-load("./code/a_ready_to_apply_nirs_model_nutrient/nirs_faecal_P_model2024.rda")
+load("./R scripts/codes/01_prediction_model/nirs_faecal_N_model2024.rda")
+load("./R scripts/codes/01_prediction_model/nirs_faecal_C_model2024.rda")
+load("./R scripts/codes/01_prediction_model/nirs_faecal_P_model2024.rda")
 
 ####------------------------------------------------------------------------####
 #### PREDICT NUTRIENT CONCENTATIONS USING THE MODELS

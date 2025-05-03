@@ -1,44 +1,40 @@
 ################################################################################
 #
-#                         FAECAL N NIRS CALIBRATION MODEL
+#                NIRS MODEL CALIBRATION FOR FAECAL N CONTENT
 #
 ################################################################################
 
 # last update: Oct 25, 2024
 
-## This script is calibrating monospecific and multispecies NIRS model to assess
-# faecal nitrogen content from herbivores in the Icelandic tundra
+# This script calibrates monospecific and multispecies NIRS models to predict 
+# the faecal nitrogen (N) content of herbivores in the Icelandic tundra. The models 
+# are developed using spectral data collected from faecal samples and lab-measured 
+# nutrient concentrations.
 
-## Full description of the calibration can be read in :
-# Capturing seasonal variations in faecal nutrient content from tundra 
-# herbivores using Near Infrared Reflectance Spectroscopy 
-# here the DOI of the publication
-# 2024
+## Data Source:
+# - Samples were collected from herbivores (sheep, reindeer, pink-footed goose) 
+#   in the Eastern Highlands of Iceland, during multiple time points in the growing season.
 
-## The model is developed  with samples from Iceland.
+## Sample Preparation:
+# - Faecal samples were dried at 40°C for 3 hours, then cooled in a desiccator.
+# - Samples were then compressed into Ø15mm tablets under 4 tons of pressure before scanning.
 
-## Samples are presented as tablets, dried at 40°C for 3 hours 
-# and cooled down in a desiccator
-## Thereafter samples are scanned with NIRS 
+## lab measurement:
+# - N and C concentrations were measured using a Flash 2000 CN analyzer.
+# - P concentration was determined via acid digestion and colorimetric 
+#   methods.
 
-# A FieldSpec 4 was used to scan the samples, with a spectral range of 350-2500nm, 
-# with a sampling interval of 1.4 nm in the 350-1000 nm range 
-# and 2 nm in the 1000-2500 nm range
+## Spectral measurement:
+# - A FieldSpec 4 spectrometer was used, covering a spectral range of 350-2500 nm.
+# - The sampling interval was 1.4 nm in the 350-1000 nm range and 2 nm in the 1000-2500 nm range.
 
-# N and C Concentration were estimated using a Flash 2000 CN analyser, 
-# P concentration was determined through acid destruction and calorimetric 
-# at the University of Antwerp 
+## Model Development:
+# - The calibration model uses Log 1/R spectra, with nutrient content expressed as % dry weight.
+# - Detailed steps for calibration and validation are contained in the function "calibration_nirs.R".
+# - The final multispecies model is saved as "nirs_faecal_N_model2024.rda".
 
-## Model developed with Log 1/R spectra, values measured in % Dry Weight
-
-# the detailed steps to calibrate and validate the model are contained in the 
-# function "calibration_nirs.R"
-
-# the final multispecies model, including all herbivore species is saved
-# in the file "nirs_faecal_C_model2024.rda"
-
-# Contact person: 
-# Mathilde Defourneaux(mathilde@lbhi.is) 
+## Contact:
+# Mathilde Defourneaux (mathilde@lbhi.is)
 
 #### -----------------------------------------------------------------------####
 #### SETUP
@@ -46,12 +42,12 @@
 
 ## library
 
-source("./code/setup.R")
+source("./R scripts/codes/setup.R")
 
 ## LOAD DATA -------------------------------------------------------------------
 
 # data set
-source("./code/data_formating/cleaning_nirs_calibration_data.R")
+source("./R scripts/codes/02_data_preprocessing/cleaning_nirs_calibration_data.R")
 
 ## MODEL PARAMETERS ------------------------------------------------------------
 
@@ -60,15 +56,15 @@ inVar <- "N"
 
 ## FUNCTIONS -------------------------------------------------------------------
 
-source("./functions/calibration_nirs.R") # function to calibrate the model
+source("./R scripts/functions/calibration_nirs.R") # function to calibrate the model
 se <- function(x) sd(x)/sqrt(length(x))  # function for standard error
 
 ## PLOTS AESTHETICS ------------------------------------------------------------
 
-source("./functions/theme_perso.R") # function for personal plot theme
+source("./R scripts/functions/theme_perso.R") # function for personal plot theme
 
 palette_herbivore <- c("#E57F84", "#5F9EA0", "#EBB261")
-palette_session <- c("#d4e09b", "#797d62","#C5705D")
+palette_session <- c("#d4e09b", "#797d62","#d08c60")
 
 #### ---------------------------------------------------------------------- ####
 #### INSPECT DATASET 
