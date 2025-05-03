@@ -6,26 +6,27 @@
 
 # last update: OCt 25, 2024
 
-## This script is format and clean NIRS spectral data 
+# This script preprocesses faecal nutrient data (C, N, P) from lab analysis and 
+# spectral data for NIRS calibration. Key steps include:
+#
+# - Merging faecal nutrient content (C, N, P) from wet lab analysis with NIRS 
+#   spectral data
+# - Checking for data errors (duplicates, missing values, outliers)
+# - Formatting the dataset for NIRS model calibration
+# 
+# Sample Preparation:
+# - Faecal samples collected from herbivores in Iceland (sheep, reindeer, pink footed goose)
+# - Samples dried, milled, and pressed into tablets
+# - A FieldSpec 4 was used for scanning with a spectral range of 350-2500 nm
+# - Sampling interval: 1.4 nm (350-1000 nm range) and 2 nm (1000-2500 nm range)
 
-## Full description of the methods can be read in :
-# Capturing seasonal variations in faecal nutrient content from tundra 
-# herbivores using Near Infrared Reflectance Spectroscopy 
-# here the DOI of the publication
-# 2024
-
-## The spectral data are from fresh faecal samples from herbivores in 
-# Iceland 
-
-## Samples are presented as tablets, dried at 40°C for 3 hours 
-# and cooled down in a desiccator
-## Thereafter samples are scanned with NIRS 
-
-#A FieldSpec 4 was used to scan the samples, with a spectral range of 350-2500nm, 
-# with a sampling interval of 1.4 nm in the 350-1000 nm range 
-# and 2 nm in the 1000-2500 nm range
-
-# contact Mathilde Defourneaux (mathilde@lbhi.is) for more information
+# For more details, see:
+# Defourneaux, M., et al. (2025). Capturing seasonal variations in faecal nutrient 
+# content from tundra herbivores using Near Infrared Reflectance Spectroscopy. 
+# Science of the Total Environment (in press).
+#
+# Contact: Mathilde Defourneaux (mathilde@lbhi.is) for more information
+#
 
 ####------------------------------------------------------------------------####
 #### SETUP
@@ -34,13 +35,13 @@
 set.seed(132)
 
 ## ---- library
-source("./code/setup.R")
+source("./R scripts/codes/setup.R")
 
 # not in
 `%notin%` <- Negate(`%in%`)
 
 # load data
-data_spectra <- fread("./data/24-10-2024_dataset_dung_spectra_2022_log1R_final.txt", sep = ";", header = T)
+data_spectra <- fread(".//R scripts/data/24-10-25_dataset_dung_spectra_2022_log1R_final.txt", sep = ";", header = T)
 
 # define wavelength --> NIR
 start_wave <- 1100
@@ -173,13 +174,5 @@ rm(data_spectra,
    spectre_mean,
    pca
    )
-
-####------------------------------------------------------------------------####
-#### TO SAVE THE CLEANED AND FORMATED DATA
-####------------------------------------------------------------------------####
-
-#fwrite(nirs, 
-#      file = "./data/cleaned_nirs_data.txt", 
-#     col.names = TRUE, sep =";")
 
 ### THE END
