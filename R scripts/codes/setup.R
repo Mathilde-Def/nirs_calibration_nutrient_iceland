@@ -58,7 +58,19 @@ install_load_library(libs)
 pls::pls.options(plsralg = "oscorespls")
 pls::pls.options("plsralg")
 
-# create folders in working directories, set paths
-dir.create(paste0(getwd(),"/figures/nirs_data"))
-dir.create(paste0(getwd(),"/figures/pls_model"))
-dir.create(paste0(getwd(),"/figures/tables"))
+# Create a 'figures' folder if it doesn't exist
+figures_path <- file.path(getwd(), "figures")
+if (!dir.exists(figures_path)) {
+  dir.create(figures_path)
+}
+
+# Create subfolders inside 'figures'
+subfolders <- c("nirs_data", "pls_model", "tables")
+
+# Loop through the subfolder names and create them
+for (folder in subfolders) {
+  folder_path <- file.path(figures_path, folder)
+  if (!dir.exists(folder_path)) {
+    dir.create(folder_path)
+  }
+}
