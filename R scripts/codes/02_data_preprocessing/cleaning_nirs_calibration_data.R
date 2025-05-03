@@ -45,7 +45,7 @@ source("./R scripts/codes/setup.R")
 
 # load data
 faecal_nut_lab <- fread(file = "./R scripts/data/24-10-25_faecal_nutrient_wet_lab.txt", sep = ";", header = T) # nutrient estimates from wet laboratory analysis
-source("./R scripts/codes/data_formating/cleaning_spectral_data.R") # NIRS spectral data
+source("./R scripts/codes/02_data_preprocessing/cleaning_spectral_data.R") # NIRS spectral data
 
 ####------------------------------------------------------------------------####
 #### ERRORS AND CLEANING
@@ -137,13 +137,5 @@ dim(data_model) # 181 samples left
 
 rm(faecal_nut_lab,
    duplicates, nirs, pca)
-
-####------------------------------------------------------------------------####
-#### TO SAVE THE CLEANED AND FORMATED DATA
-####------------------------------------------------------------------------####
-
-#fwrite(data_model, 
-#      file="./data/2-labdata/data_model.txt", 
-#     col.names = TRUE, sep =";")
 
 ### THE END
