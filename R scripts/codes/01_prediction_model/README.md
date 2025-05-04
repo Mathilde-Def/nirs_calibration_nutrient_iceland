@@ -38,10 +38,10 @@ Sample preparation and scanning details:
 - These models are calibrated under specific ecological and biological conditions. Extrapolation beyond the original dataset should be approached with caution.
 
 ## Contact
-Specific questions about the dataset and models can be addressed to
+Specific questions about the dataset and models can be addressed to 
 **Mathilde Defourneaux** – mathilde@lbhi.is  
 **Isabel C. Barrio** – isabel@lbhi.is
 
 ## Reference
-Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., Speed, J.D.M., Barrio, I.C. (2025). *Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy*. *Science of the Total Environment* (in press).  
+Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., Speed, J.D.M., Barrio, I.C. (2025). Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy. Science of the Total Environment (in press).  
 
