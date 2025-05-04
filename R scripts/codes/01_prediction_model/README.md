@@ -33,7 +33,7 @@ Sample preparation and scanning details:
     22-106-A-G1    <matrix[30 x 2151]>
     ...
     ```
-- predicted nutrient concentrations are presented in % dry weight.
+- Predicted nutrient concentrations are presented in % dry weight.
 - The R script `a_ready_to_apply_nirs_model_nutrient.R` loads the R object, and contains instructions on how to proceed with the prediction. 
 - These models are calibrated under specific ecological and biological conditions. Extrapolation beyond the original dataset should be approached with caution.
 
