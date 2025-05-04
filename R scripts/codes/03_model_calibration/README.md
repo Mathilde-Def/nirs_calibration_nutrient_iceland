@@ -4,9 +4,9 @@ This folder contains R scripts used to calibrate both monospecific and multispec
 ## Overview
 This subdirectory includes scripts to develop and evaluate calibration models using paired lab reference data and faecal spectral data:
 
-- `calibration_C.R` – Calibration of carbon model  
-- `calibration_N.R` – Calibration of nitrogen model  
-- `calibration_P.R` – Calibration of phosphorus model  
+- `faecal_calibration_C.R` – Calibration of carbon model  
+- `faecal_calibration_N.R` – Calibration of nitrogen model  
+- `faecal_calibration_P.R` – Calibration of phosphorus model  
 
 Each script includes:
 - **Monospecific models** (separate models for pink-footed goose, sheep, and reindeer)  
