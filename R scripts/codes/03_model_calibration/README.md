@@ -1,4 +1,4 @@
-# 03_model_calibration – Predicting Faecal Nutrient Content from NIRS Data
+# 03_model_calibration
 This folder contains R scripts used to calibrate both monospecific and multispecies near-infrared reflectance spectroscopy (NIRS) models to predict faecal carbon (C), nitrogen (N), and phosphorus (P) content (% dry weight) from herbivores in the Icelandic tundra.
 
 ## Overview
