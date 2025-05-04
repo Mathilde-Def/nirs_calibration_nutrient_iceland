@@ -24,8 +24,8 @@ Faecal samples were collected during the 2022 growing season in the Eastern High
 ## Contact
 
 For questions about this analysis or the dataset, please contact:  
-**Mathilde Defourneaux** – mathilde@lbhi.is  
-**Isabel C. Barrio** – isabel@lbhi.is
+- **Mathilde Defourneaux** – mathilde@lbhi.is  
+- **Isabel C. Barrio** – isabel@lbhi.is
 
 ## Reference
 
