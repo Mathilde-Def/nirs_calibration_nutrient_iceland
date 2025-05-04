@@ -76,9 +76,9 @@ This folder contains all datasets used for calibration, prediction, and analysis
 | `grazing_time`    | Duration of grazing within the study area                                | days                |
 | `density_km`      | Estimated population density                                              | individuals/km²     |
 | `population`      | Estimated number of individuals                                           | individuals         |
-| `weight_g`        | Average individual body weight                                            | grams               |
+| `weight_g`        | Average individual body weight                                            | g               |
 | `growing_season`  | Duration of the growing season                                            | days                |
-| `weight_kg`       | Average body weight (converted)                                           | kilograms           |
+| `weight_kg`       | Average body weight (converted)                                           | kg          |
 | `mb`              | Estimated metabolic biomass (total for population)                       | kg·km⁻¹·year⁻¹      |
 
 ---
@@ -91,9 +91,9 @@ This folder contains all datasets used for calibration, prediction, and analysis
 |-------------|----------------------------------------------------------|------------|
 | `id`        | Unique identifier for each faecal pile sample            | –          |
 | `herbivore` | Herbivore species (common name)                          | –          |
-| `pile_ww`   | Total fresh weight of the faecal pile                    | grams (g)  |
-| `sample_ww` | Fresh weight of the subsample used for drying            | grams (g)  |
-| `sample_dw` | Dry weight of the subsample after oven-drying at 40°C    | grams (g)  |
+| `pile_ww`   | Total fresh weight of the faecal pile                    | g  |
+| `sample_ww` | Fresh weight of the subsample used for drying            | g |
+| `sample_dw` | Dry weight of the subsample after oven-drying at 40°C    | g |
 
 ---
 
