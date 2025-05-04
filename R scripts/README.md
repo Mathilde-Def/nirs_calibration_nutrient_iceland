@@ -21,13 +21,14 @@ Sample preparation steps:
 Contains all relevant code, raw data, and custom functions.
 
 #### `code/`
-Organized into subfolders by step in the analysis pipeline:
+Contains a setup file to load require libraries used throughout the calibration, predictions and analysis
+Organised into subfolders by step in the analysis pipeline:
 
 - **`01_prediction_model/`**  
   Ready-to-use NIRS model for nutrient prediction. See folder-specific README for usage instructions.
 
 - **`02_data_preprocessing/`**  
-  Scripts for converting and structuring spectral data, identifying outliers, and merging lab data for calibration.
+  Scripts for formatting and pre-processing spectral data, identifying outliers, and merging wet lab data for calibration.
 
 - **`03_model_calibration/`**  
   Model calibration scripts for predicting C, N, and P using NIRS.
@@ -39,7 +40,7 @@ Organized into subfolders by step in the analysis pipeline:
 Reusable custom R functions used throughout the analysis.
 
 #### `data/`
-Original data files, including spectral measurements and lab results.
+Original data files, including spectral measurements and wet lab data.
 
 ## Disclaimer
 
@@ -61,5 +62,5 @@ For questions about the dataset or models, please contact:
 
 ## References
 
-Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., Speed, J.D.M., Barrio, I.C., 2025. *Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy.* Science of the Total Environment. *(in press)*
+Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., Speed, J.D.M., Barrio, I.C., 2025. Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy. Science of the Total Environment. (in press)
 
