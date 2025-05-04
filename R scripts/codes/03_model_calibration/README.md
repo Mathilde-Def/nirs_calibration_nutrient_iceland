@@ -44,8 +44,8 @@ Models were calibrated using log(1/R) spectral values and nutrient concentration
 ## Contact
 
 For questions about model calibration or dataset usage, please contact:
-**Mathilde Defourneaux** – mathilde@lbhi.is  
-**Isabel C. Barrio** – isabel@lbhi.is
+- **Mathilde Defourneaux** – mathilde@lbhi.is  
+- **Isabel C. Barrio** – isabel@lbhi.is
 
 ## Reference
-Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., Speed, J.D.M., Barrio, I.C. (2025). *Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy*. *Science of the Total Environment* (in press).  
+Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., Speed, J.D.M., Barrio, I.C. (2025). Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy. Science of the Total Environment (in press).  
