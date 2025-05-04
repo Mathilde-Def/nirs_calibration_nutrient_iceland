@@ -22,7 +22,7 @@ Sample preparation and scanning details:
 ## Usage Notes
 - Scripts require input data pre-processed via `02_data_preprocessing/cleaning_spectral_data.R`.
 - The **input data** must be structured as follows:
-  - **Rows**: Each row corresponds to a single faecal sample (313 rows in total).
+  - **Rows**: Each row corresponds to a single faecal sample.
   - **Columns**:
     - `id`: A unique identifier for each sample (e.g., "22-083-A-G1", "22-106-A-G1").
     - `Spectra`: A matrix containing spectral data with 2151 columns representing the spectral wavelengths from 1100-2450 nm, in **log(1/R)**.
