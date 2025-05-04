@@ -551,5 +551,5 @@ fwrite(model_perfs,
 #--------------------------------------------------------------------------------------------------#
 
 nirs_faecal_P_model2024 <- all_results$model
-save(nirs_faecal_P_model2024, 
-     file = "./code/a_ready_to_apply_nirs_model_nutrient/nirs_faecal_P_model2024.rda")  # save the model
+#save(nirs_faecal_P_model2024, 
+#     file = "./R scripts/codes/01_prediction_model/nirs_faecal_P_model2024.rda")  # save the model

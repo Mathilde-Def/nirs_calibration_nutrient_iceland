@@ -9,15 +9,11 @@
 ## This script are the models to see the differences in faecal content of each 
 # nutrient per herbivore species along the season 
 
-## Full description of the calibration can be read in :
-# Capturing seasonal variations in faecal nutrient content from tundra 
-# herbivores using Near Infrared Reflectance Spectroscopy 
-# here the DOI of the publication
-# 2024
+## Full description of the calibration can be read in : Defourneaux et al. 2025 (in press)
 
 ## The analysis are based on samples from Iceland.
 
-# herbivore nutrient content were evalutated using nirs calibration model 
+# herbivore nutrient content were evaluated using nirs calibration model 
 # on dried faecal samples
 
 ## Samples were presented as tablets, dried at 40°C for 3 hours 
@@ -325,11 +321,11 @@ plot_nutrient_session <- combined_results_cld_clean %>%
 print(plot_nutrient_session)
 # Adjusts facet label size
 
-ggsave("./figures/nutrient_content/nutrients_season_2.png", 
+ggsave("./figures/nutrients_season.png", 
        plot_nutrient_session, 
        width = 15, height = 20) #width = 140, height = 200, units = "mm", dpi = 1000
 
-ggsave("./figures/nutrient_content/nutrients_season.svg", 
+ggsave("./figures/nutrients_season.svg", 
        plot_nutrient_session, 
        width = 15, height = 20,
        device = "svg")

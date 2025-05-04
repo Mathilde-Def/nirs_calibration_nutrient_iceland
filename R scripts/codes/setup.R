@@ -45,6 +45,7 @@ libs <- c("tidyverse", # data wrangling, manipulation
           "vegan", # NMDS
           "MASS", #NMDS
           "emmeans", # multiple pairwise comparison
+          "multcomp",
           "lme4") # ANOVA
 
 # Install and load libraries

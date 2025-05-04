@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-# last update: OCt 25, 2024
+# last update: Oct 25, 2024
 
 # This script preprocesses faecal nutrient data (C, N, P) from lab analysis and 
 # spectral data for NIRS calibration. Key steps include:
