@@ -1,21 +1,11 @@
-# NIRS Prediction Model – Faecal Nutrients
+# 01_prediction_model
 
 This folder contains a ready-to-use prediction model for estimating C, N, and P in herbivore faecal samples using NIRS spectral data.
 
-## Contents
+## Overview
 
-- `Prediction_script.R`: Main script to apply the model to new spectral data.
-- `C_Prediction_model.rda`, `N_Prediction_model.rda`, `P_Prediction_model.rda`: Pre-trained models for each nutrient.
-- `Test_dataset.txt`: Example dataset with spectral data to validate the model.
+- `Prediction_script.R`: Main script to apply the prediction models to new spectral data.
+- `nirs_faecal_C_model2024.rda`: Final multispecies model to predict carbon (% dry weight).
+- `nirs_faecal_N_model2024.rda`: Final multispecies model to predict nitrogen (% dry weight).
+- `nirs_faecal_P_model2024.rda`: Final multispecies model to predict phosphorus (% dry weight).
 
-## How to Use
-
-1. Load the `Prediction_script.R` in R.
-2. The script will load the `.rda` model files automatically.
-3. Run the script to generate predictions on the example dataset.
-
-### Test Dataset Structure
-
-- Column `Wavelength`: Unique sample ID assigned during scanning.
-- Columns `X350` to `X2500`: Spectral data in log(1/R) format.
-- Column `X`: Empty column to be removed during preprocessing.
