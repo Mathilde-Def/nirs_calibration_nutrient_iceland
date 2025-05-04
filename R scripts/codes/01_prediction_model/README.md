@@ -38,7 +38,8 @@ Sample preparation and scanning details:
 - These models are calibrated under specific ecological and biological conditions. Extrapolation beyond the original dataset should be approached with caution.
 
 ## Contact
-Specific questions about the dataset and models can be addressed to **Mathilde Defourneaux** – mathilde@lbhi.is  
+Specific questions about the dataset and models can be addressed to
+**Mathilde Defourneaux** – mathilde@lbhi.is  
 **Isabel C. Barrio** – isabel@lbhi.is
 
 ## Reference
