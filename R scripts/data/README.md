@@ -6,13 +6,11 @@ This folder contains all datasets used for calibration, prediction, and analysis
 
 ## Overview 
 
-| Filename                                        | Description                                                                 |
-|------------------------------------------------|-----------------------------------------------------------------------------|
-| `24-10-25_dataset_dung_spectra_2022_log1R_final.txt` | Raw NIRS spectral data (log(1/R)); used for model calibration and prediction |
-| `24-10-25_faecal_nutrient_wet_lab.txt`         | Wet lab measurements of N, P, and C in faeces; used in model calibration    |
-| `24-10-25_data_nutrient_prediction.txt`        | Output of nutrient prediction models based on spectral data                 |
-| `24-10-25_faecal_deposition.txt`               | Data used to estimate herbivore nutrient deposition                         |
-| `24-10-25_pellet_weight.txt`                   | Dry weight of faecal pellets by species                                     |
+-  `24-10-25_dataset_dung_spectra_2022_log1R_final.txt` : Raw NIRS spectral data (log(1/R)); used for model calibration and prediction 
+- `24-10-25_faecal_nutrient_wet_lab.txt`: Wet lab measurements of N, P, and C in faeces; used in model calibration    
+- `24-10-25_data_nutrient_prediction.txt`: Output of nutrient prediction models based on spectral data                 
+- `24-10-25_faecal_deposition.txt`: Data used to estimate herbivore nutrient deposition                         
+- `24-10-25_pellet_weight.txt` : Dry weight of faecal pellets by species                                   
 
 ---
 
