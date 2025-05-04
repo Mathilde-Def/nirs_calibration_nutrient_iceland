@@ -15,14 +15,14 @@
 # here the DOI of the publication
 # 2024
 
-## The models are developed  with samples from Iceland.
+## The analysis are based on samples from Iceland.
 
 # herbivore nutrient content were evalutated using nirs calibration model 
 # on dried faecal samples
 
 ## Samples were presented as tablets, dried at 40°C for 3 hours 
 # and cooled down in a desiccator
-## Thereafter samples are scanned with NIRS 
+## Thereafter samples were scanned with NIRS 
 
 #A FieldSpec 4 was used to scan the samples, with a spectral range of 350-2500nm, 
 # interpolated at 1nm intervals
@@ -50,18 +50,18 @@
 set.seed(132)
 
 ## ---- library
-source("./code/setup.R")
+source("./R scripts/codes/setup.R")
 
 # data set
 
-data_nutrient <- fread(file = "./data/24-10-25_data_nutrient_prediction.txt", sep = ";", header = T)
+data_nutrient <- fread(file = "./R scripts/data/24-10-25_data_nutrient_prediction.txt", sep = ";", header = T)
 
 ## FUNCTIONS ------------------------------------------------------_------------
 se <- function(x) sd(x)/sqrt(length(x))  # function for standard error
 
 ## PLOTS AESTHETICS ------------------------------------------------------------
 
-source("./functions/theme_perso.R") # function for personal plot theme
+source("./R scripts/functions/theme_perso.R") # function for personal plot theme
 palette_herbivore <- c("#E57F84", "#5F9EA0", "#EBB261")
 
 ####------------------------------------------------------------------------####

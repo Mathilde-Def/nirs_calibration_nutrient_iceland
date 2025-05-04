@@ -67,6 +67,44 @@ load("./R scripts/codes/01_prediction_model/nirs_faecal_C_model2024.rda")
 load("./R scripts/codes/01_prediction_model/nirs_faecal_P_model2024.rda")
 
 ####------------------------------------------------------------------------####
+#### FORMATTING DATA
+####------------------------------------------------------------------------####
+
+# NOTE:
+# The script `cleaning_spectral_data.R` (located in "./R scripts/codes/02_data_preprocessing/")
+# automates all pre-processing steps: formatting, outline detection, and cleaning.
+# Use the manual code below only if you wish to directly apply the models
+
+## Load your raw spectral data
+# Replace `"your_data.txt"` with the path to your file
+# nirs <- fread("your_data.txt", sep = ";", header = TRUE)
+
+## Format the spectral data
+# Convert the reflectance data into a matrix and store it in a new dataframe
+# nirs <- data.frame(id = spectre_mean$id)
+# nirs$Spectra <- as.matrix(spectre_mean[2:2152])  # assumes spectral data starts at column 2
+# glimpse(nirs)  # optional: inspect the structure
+
+## Apply splice correction (optional but recommended)
+# This corrects discontinuities between detector ranges (typically at 1000 nm and 1800 nm)
+# nirs$Spectra <- spliceCorrection(
+#   nirs$Spectra,
+#   wavelengths = 350:2500,
+#   splice = c(1000, 1830),
+#   interpol.bands = 5
+# )
+
+## Trim spectral range to selected NIR window
+# Keep only wavelengths between `start_wave` and `end_wave`
+# start_wave <- 1100
+# end_wave <- 2450
+# nirs$Spectra <- nirs$Spectra[, grep(start_wave, colnames(nirs$Spectra))[1] :
+#                                  grep(end_wave, colnames(nirs$Spectra))[1]]
+
+# dim(nirs$Spectra)  # optional: check dimensions of the trimmed matrix
+
+
+####------------------------------------------------------------------------####
 #### PREDICT NUTRIENT CONCENTATIONS USING THE MODELS
 ####------------------------------------------------------------------------####
 
