@@ -30,5 +30,4 @@ For questions about this analysis or the dataset, please contact:
 ## Reference
 
 Defourneaux, M., Barbero-Palacios, L., Schoelynck, J., Boulanger-Lapointe, N., Speed, J.D.M., Barrio, I.C. (2025).  
-*Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy*.  
-*Science of the Total Environment* (in press).
+Capturing seasonal variations in faecal nutrient content from tundra herbivores using Near Infrared Reflectance Spectroscopy. Science of the Total Environment (in press).
